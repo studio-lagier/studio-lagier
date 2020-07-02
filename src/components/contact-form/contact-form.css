@@ -1,0 +1,7 @@
+label {
+  @apply inline-block pb-2 text-lightergrey font-bold;
+}
+
+input, textarea {
+  @apply w-full rounded-md p-2 border border-gray-300 mb-4;
+}

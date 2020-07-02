@@ -1,0 +1,23 @@
+.portfolio-image {
+  flex: 0 0 100%;
+  height: auto;
+}
+
+.portfolio-text {
+  order: 1;
+}
+
+@screen sm {
+  .portfolio-image {
+    flex: 0 0 45%;
+  }
+}
+
+@screen md {
+  .portfolio-image {
+    order: initial;
+  }
+  .portfolio-text {
+    order: initial;
+  }
+}

@@ -1,0 +1,13 @@
+.computer-background {
+  background-image: url("/images/computer-bg.jpg");
+}
+
+@media screen and (min-width: 767px) {
+  .computer-background {
+    clip-path: ellipse(60% 100% at 60%);
+  }
+}
+
+.nudge-left {
+  left: -1px;
+}

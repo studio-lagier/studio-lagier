@@ -1,0 +1,56 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'flickity/css/flickity.css';
+@import './css/utilities.css';
+@import './css/colors.css';
+@import './components/typing-effect/index.css';
+@import './components/header/header.css';
+@import './components/header/hamburger.css';
+@import './components/contact-form/contact-form.css';
+@import './components/blob-section/index.css';
+@import './components/carousel-slide/index.css';
+@import './components/portfolio-section/index.css';
+@import './components/circle-image/index.css';
+@import './pages/index.css';
+@import 'tailwindcss/utilities';
+* {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  @apply bg-white;
+  color: var(--darkergrey);
+}
+
+h2 {
+  @apply text-5xl font-bold;
+}
+
+p a {
+  @apply font-bold text-afternoon;
+}
+
+a:hover {
+  @apply text-dusk;
+}
+
+.primary-button {
+  @apply rounded-full px-3 py-2 text-offwhite bg-afternoon transition-colors duration-300 cursor-pointer appearance-none;
+}
+
+@screen lg {
+  .primary-button {
+    @apply px-6;
+  }
+}
+
+@screen md {
+  .primary-button {
+    @apply px-5;
+  }
+}
+
+.primary-button:hover {
+  @apply bg-dusk text-offwhite;
+}

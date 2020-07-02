@@ -1,0 +1,14 @@
+.slide-nav {
+  transition: transform 0.5s ease-out;
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 767px) {
+  .slide-nav {
+    right: -100%;
+  }
+  .slide-nav.open {
+    transform: translateX(-100%);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+  }
+}
