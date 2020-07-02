@@ -10,8 +10,15 @@ export default function useBoundingRect(change) {
 
   useEffect(() => {
     set();
-    window.addEventListener("resize", set);
-    return () => window.removeEventListener("resize", set);
+
+    if(typeof window !== "undefined") {
+      window.addEventListener("resize", set);
+    }
+    return () => {
+      if(typeof window !== "undefined") {
+        window.removeEventListener("resize", set);
+      }
+    }
   }, [change]);
 
   return [bbox, ref];

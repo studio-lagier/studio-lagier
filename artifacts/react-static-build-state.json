@@ -16,29 +16,30 @@
   "entry": "index.js",
   "plugins": [
     [
-      "/Users/tlagier/Projects/test-react-static/node_modules/react-static-plugin-source-filesystem/node.api.js",
+      "/Users/tlagier/Projects/studio-lagier/node_modules/react-static-plugin-source-filesystem/node.api.js",
       {
-        "location": "/Users/tlagier/Projects/test-react-static/src/pages"
+        "location": "/Users/tlagier/Projects/studio-lagier/src/pages"
       }
     ],
-    "/Users/tlagier/Projects/test-react-static/node_modules/react-static-plugin-reach-router/browser.api.js",
-    "/Users/tlagier/Projects/test-react-static/node_modules/react-static-plugin-sitemap/dist/node.api.js",
-    "/Users/tlagier/Projects/test-react-static"
+    "/Users/tlagier/Projects/studio-lagier/node_modules/react-static-plugin-reach-router/browser.api.js",
+    "/Users/tlagier/Projects/studio-lagier/node_modules/react-static-plugin-sitemap/dist/node.api.js",
+    "/Users/tlagier/Projects/studio-lagier/node_modules/react-static-plugin-svg/node.api.js",
+    "/Users/tlagier/Projects/studio-lagier"
   ],
   "paths": {
-    "ROOT": "/Users/tlagier/Projects/test-react-static",
-    "SRC": "/Users/tlagier/Projects/test-react-static/src",
-    "DIST": "/Users/tlagier/Projects/test-react-static/dist",
-    "ASSETS": "/Users/tlagier/Projects/test-react-static/dist",
-    "PLUGINS": "/Users/tlagier/Projects/test-react-static/plugins",
-    "TEMP": "/Users/tlagier/Projects/test-react-static/tmp",
-    "ARTIFACTS": "/Users/tlagier/Projects/test-react-static/artifacts",
-    "PUBLIC": "/Users/tlagier/Projects/test-react-static/public",
-    "NODE_MODULES": "/Users/tlagier/Projects/test-react-static/node_modules",
-    "EXCLUDE_MODULES": "/Users/tlagier/Projects/test-react-static/node_modules",
-    "PACKAGE": "/Users/tlagier/Projects/test-react-static/package.json",
-    "HTML_TEMPLATE": "/Users/tlagier/Projects/test-react-static/dist/index.html",
-    "STATIC_DATA": "/Users/tlagier/Projects/test-react-static/dist/staticData"
+    "ROOT": "/Users/tlagier/Projects/studio-lagier",
+    "SRC": "/Users/tlagier/Projects/studio-lagier/src",
+    "DIST": "/Users/tlagier/Projects/studio-lagier/dist",
+    "ASSETS": "/Users/tlagier/Projects/studio-lagier/dist",
+    "PLUGINS": "/Users/tlagier/Projects/studio-lagier/plugins",
+    "TEMP": "/Users/tlagier/Projects/studio-lagier/tmp",
+    "ARTIFACTS": "/Users/tlagier/Projects/studio-lagier/artifacts",
+    "PUBLIC": "/Users/tlagier/Projects/studio-lagier/public",
+    "NODE_MODULES": "/Users/tlagier/Projects/studio-lagier/node_modules",
+    "EXCLUDE_MODULES": "/Users/tlagier/Projects/studio-lagier/node_modules",
+    "PACKAGE": "/Users/tlagier/Projects/studio-lagier/package.json",
+    "HTML_TEMPLATE": "/Users/tlagier/Projects/studio-lagier/dist/index.html",
+    "STATIC_DATA": "/Users/tlagier/Projects/studio-lagier/dist/staticData"
   },
   "siteRoot": "/",
   "basePath": "",

@@ -7,11 +7,19 @@ export const ScrollContext = createContext(0);
 export function ScrollProvider({ children }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   useEffect(() => {
-    const scrollListener = () => setScrollPosition(window.scrollY);
-    window.addEventListener("scroll", scrollListener);
+    const scrollListener = () => {
+      if(typeof window !== "undefined") {
+        setScrollPosition(window.scrollY);
+      }
+    }
+    if(typeof window !== "undefined") {
+      window.addEventListener("scroll", scrollListener);
+    }
 
     return () => {
-      window.removeEventListener("scroll", scrollListener);
+      if(typeof window !== "undefined") {
+        window.removeEventListener("scroll", scrollListener);
+      }
     };
   }, []);
 
@@ -31,7 +39,7 @@ function TriggerOnScroll({
   const [triggered, setTriggered] = useState(false);
   const [{ top }, ref] = useBoundingRect(scrollY);
 
-  if (!triggered && top < window.outerHeight * 0.66) {
+  if (typeof window !== "undefined" && !triggered && top < window.outerHeight * 0.66) {
     setTriggered(true);
   }
 
