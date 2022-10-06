@@ -1,14 +1,14 @@
-import React from "react";
-import Flickity from "react-flickity-component";
-import Page from "../containers/Page";
-import TypingEffect from "../components/typing-effect";
-import ContactForm from "../components/contact-form/ContactForm";
-import Tag from "../components/Tag";
-import { ScrollListener } from "../components/ScrollListener";
-import CarouselSlide from "../components/carousel-slide";
-import BlobSection from "../components/blob-section";
-import PortfolioSection from "../components/portfolio-section";
-import CircleImage from "../components/circle-image";
+import React from 'react';
+import Flickity from 'react-flickity-component';
+import Page from '../containers/Page';
+import TypingEffect from '../components/typing-effect';
+import ContactForm from '../components/contact-form/ContactForm';
+import Tag from '../components/Tag';
+import { ScrollListener } from '../components/ScrollListener';
+import CarouselSlide from '../components/carousel-slide';
+import BlobSection from '../components/blob-section';
+import PortfolioSection from '../components/portfolio-section';
+import CircleImage from '../components/circle-image';
 
 export default function IndexPage() {
   return (
@@ -23,15 +23,20 @@ export default function IndexPage() {
             <div className="relative nudge-left pt-2">
               <TypingEffect
                 className="text-6xl md:text-5xl lg:text-6xl leading-none relative font-bold"
-                text={["SOLID", "FAST", "AMAZING", "TOGETHER"]}
+                text={[
+                  'SOLID',
+                  'FAST',
+                  'AMAZING',
+                  'TOGETHER',
+                ]}
                 speed={100}
                 typingDelay={1000}
                 eraseDelay={1200}
               />
             </div>
             <p className="text-xl py-8">
-              A full-stack web-development consultancy for Node.js services and
-              React applications.
+              A full-stack web-development consultancy for
+              Node.js services and React applications.
             </p>
             <a
               type="button"
@@ -54,40 +59,92 @@ export default function IndexPage() {
       >
         <h2>Services</h2>
         <p className="text-xl max-w-lg mx-auto pt-4">
-          Studio Lagier focuses on all areas of a project's life-cycle. We're
-          passionate about building Javascript applications and bringing
-          ambitious ideas to life.
+          Studio Lagier focuses on all areas of a project's
+          life-cycle. We're passionate about building
+          Javascript applications and bringing ambitious
+          ideas to life.
         </p>
         <ScrollListener
           className="max-w-3xl pt-8 mx-auto text-left sm:text-center slide-in"
           triggeredClassName="animation-triggered"
         >
-          <Tag icon="nodejs">Full-stack Javascript apps</Tag>
+          <Tag icon="nodejs">
+            Full-stack Javascript apps
+          </Tag>
+          <Tag icon="react">
+            React, React Native, and NextJS
+          </Tag>
           <Tag icon="money">Landing pages</Tag>
           <Tag icon="interface">Admin interfaces</Tag>
           <Tag icon="database">Schema design</Tag>
-          <Tag icon="clock">Frontend performance tuning</Tag>
+          <Tag icon="clock">
+            Frontend performance tuning
+          </Tag>
           <Tag icon="chat">Real-time infrastructure</Tag>
           <Tag icon="chart">Data visualization</Tag>
           <Tag icon="report">Architecture audits</Tag>
-          <Tag icon="alert">Analytics and logging solutions</Tag>
+          <Tag icon="alert">
+            Analytics and logging solutions
+          </Tag>
         </ScrollListener>
       </div>
       {/* Portfolio */}
-      <div id="portfolio" className="text-left sm:text-center px-8 py-24">
+      <div
+        id="portfolio"
+        className="text-left sm:text-center px-8 py-24"
+      >
         <h2>Our past work</h2>
         <div className="max-w-6xl mx-auto">
           <PortfolioSection
-            title="StackInfluence database migration"
+            title="Orchid Health patient reports"
+            img="/images/portfolio/orchid.jpg"
+            alt="Screenshot of Orchid Health patient reports"
+            link="https://www.orchidhealth.com/"
+            linkText="See the portal"
+          >
+            Orchid Health needed beautiful, handcrafted
+            patient reports including custom charts and
+            interactive graphs to display sensitive
+            information about patient and embryo health.
+            This was a deep data visualization project using
+            React, Next.js and D3 to create a thoughtful
+            experience optimized for mobile. These reports
+            are the foundation of Orchid's early product
+            launch and are helping parents make fertility
+            decisions today.
+          </PortfolioSection>
+          <PortfolioSection
+            title="StackInfluence technical leadership"
             img="/images/portfolio/stackinfluence.jpg"
             alt="Screenshot of StackInfluence website"
             link="https://stackinfluence.com/"
             linkText="Check them out"
+            swap
           >
-            Working with the team at StackInfluence, we migrated their MongoDB
-            database to a new PostgreSQL instance. We ensured that service was
-            not disrupted, the database performed above expectations, and there
-            were stability guarantees that will allow their business to scale.
+            We have worked closely with StackInfluence as
+            they have grown their operation from a series of
+            Excel spreadsheets to a full-fledged SaaS
+            platform. We have helped them build out their
+            infrastructure, develop their product, and scale
+            their team. Our partnership has allowed them to
+            massively scale both sides of their marketplace
+            and has been a key part of their success in
+            securing two rounds of funding and approaching
+            profitability.
+          </PortfolioSection>
+          <PortfolioSection
+            title="Worklete React Native app"
+            img="/images/portfolio/worklete.jpg"
+            alt="Screenshot of Worklete React Native app"
+            link="https://www.worklete.com/"
+            linkText="Have a look"
+          >
+            We helped Worklete evolve their React Native app
+            past the MVP stage to scale beyond their initial
+            trial customers to a large new cohort. By adding
+            support for dynamic notifications and complex
+            course flows, we powered them through a
+            successful launch.
           </PortfolioSection>
           <PortfolioSection
             swap
@@ -97,12 +154,15 @@ export default function IndexPage() {
             link="https://scalero.io/"
             linkText="Take a peek"
           >
-            We performed several services for the folks at Scalero. We sanitized
-            and secured a WordPress install after a security breach and moved
-            them to a properly-scaled service on AWS. We also worked to help
-            them ingest thousands of new email templates and hundreds of
-            thousands of existing variables from a large new client of theirs -
-            our script did in an hour what would have taken them weeks by hand.
+            We performed several services for the folks at
+            Scalero. We sanitized and secured a WordPress
+            install after a security breach and moved them
+            to a properly-scaled service on AWS. We also
+            worked to help them ingest thousands of new
+            email templates and hundreds of thousands of
+            existing variables from a large new client of
+            theirs - our script did in an hour what would
+            have taken them weeks by hand.
           </PortfolioSection>
           <PortfolioSection
             title="HeapViz memory leak detection tool"
@@ -111,39 +171,15 @@ export default function IndexPage() {
             link="https://heapviz.com/"
             linkText="Try it now"
           >
-            We built the HeapViz tool from the ground up. HeapViz is a
-            visualization engine for Chrome memory profiles. You can follow our
-            development through our blog posts. Chrome heap profiles are very
-            large, and we needed to use all of the performance-enhancing tools
-            at our disposal to effectively render them, including WebGL,
-            WebAssembly, and WebWorkers. It now powers a portion of the PM2
-            memory profiler.
-          </PortfolioSection>
-          <PortfolioSection
-            swap
-            title="LinkBee smartbulb landing page"
-            img="/images/portfolio/linkbee.jpg"
-            alt="Screenshot of LinkBee website"
-            link="http://web.archive.org/web/20170102021400/https://www.linkbee.com/"
-            linkText="Take a look"
-          >
-            LinkBee was a collaboration with the talented designers at
-            StudioGood, to build a fresh, bright, dynamic site for the upcoming
-            launch of a smart lightbulb startup. The level of interactivity
-            brought an exciting product to life.
-          </PortfolioSection>
-          <PortfolioSection
-            title="Aldi blog refresh"
-            img="/images/portfolio/aldi.jpg"
-            alt="Screenshot of Aldi blog"
-            link="https://blog.aldi.us/"
-            linkText="See our work"
-          >
-            This was another collaboration with the designers at StudioGood, to
-            launch an exciting rebrand of their blog alongside an interactive
-            recipes campaign to promote ALDI products. The overall result was a
-            pretty page and some fun SVG graphics that looked great across all
-            devices and browsers.
+            We built the HeapViz tool from the ground up.
+            HeapViz is a visualization engine for Chrome
+            memory profiles. You can follow our development
+            through our blog posts. Chrome heap profiles are
+            very large, and we needed to use all of the
+            performance-enhancing tools at our disposal to
+            effectively render them, including WebGL,
+            WebAssembly, and WebWorkers. It now powers a
+            portion of the PM2 memory profiler.
           </PortfolioSection>
         </div>
       </div>
@@ -189,34 +225,47 @@ export default function IndexPage() {
         </Flickity>
       </BlobSection>
       {/* About */}
-      <div id="about" className="text-left sm:text-center px-8 py-24">
+      <div
+        id="about"
+        className="text-left sm:text-center px-8 py-24"
+      >
         <h2 className="pb-8">Who are we?</h2>
         <p className="text-xl max-w-2xl mx-auto pb-8">
-          Hi! I'm{" "}
+          Hi! I'm{' '}
           <a
             href="https://www.linkedin.com/in/tomlagier/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Tom
-          </a>{" "}
-          - my wife{" "}
+          </a>{' '}
+          - my wife{' '}
           <a
             href="https://www.linkedin.com/in/mary-lagier-952b0864/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Mary
-          </a>{" "}
-          and our dog Bandit are the team behind Studio Lagier. I used to work
-          at Google, Mary was at Reflektive, and before that we worked at
-          several startups, digital, and creative agencies. Combined we have
-          almost two decades of full-stack development experience.
+          </a>{' '}
+          and our dog Bandit are the team behind Studio
+          Lagier. I used to work at Google, Mary was at
+          Reflektive, and before that we worked at several
+          startups, digital, and creative agencies. Combined
+          we have almost two decades of full-stack
+          development experience.
+        </p>
+        <p>
+          Mary's focus is on{' '}
+          <a href="https://marylagier.com/">
+            photography and creative
+          </a>
+          , and I take care of the technical side.
         </p>
         <p className="text-xl max-w-2xl mx-auto">
-          We're in sunny San Luis Obispo, California - when we're not working on
-          client projects, you can catch us hiking, surfing, or just enjoying
-          the view.
+          We're in sunny San Luis Obispo, California - when
+          we're not working on client projects, you can
+          catch us hiking, surfing, or just enjoying the
+          view.
         </p>
         <ScrollListener className="inline-block text-center mx-auto pt-20 pb-4 ">
           <CircleImage
@@ -237,13 +286,16 @@ export default function IndexPage() {
         </ScrollListener>
       </div>
       {/* Contact form */}
-      <div className="bg-dark px-8 py-24 curved-top" id="contact">
+      <div
+        className="bg-dark px-8 py-24 curved-top"
+        id="contact"
+      >
         <h2 className="text-white text-left sm:text-center antialiased">
           Get in touch
         </h2>
         <p className="text-white text-xl text-left sm:text-center max-w-md mx-auto pt-4">
-          Let's talk about your project. Leave some details and we'll get right
-          back to you.
+          Let's talk about your project. Leave some details
+          and we'll get right back to you.
         </p>
         <ScrollListener
           className="slide-up"
